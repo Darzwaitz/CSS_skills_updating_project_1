@@ -15,7 +15,7 @@
             @include clearfix;
             //attribute selector - select all classes that start with "col.."
             [class^="col-"] {
-                background-color: lightblue;
+                //background-color: lightblue;
                 float: left;
                 &:not(:last-child) {
                     margin-right: $gutter-horizontal;
