@@ -4,3 +4,17 @@
     //clear the banner image
     margin-top: -20vh;
 }
+
+.section-features {
+    padding: 20rem 0;
+    background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.794), rgba(40, 180, 133, 0.774)), url(../img/nat-4.jpg);
+    background-size: cover;
+    margin-top: -10rem;
+    //skew the whole section
+    transform: skewY(-7deg);
+    //unskew all direct child elements of this section
+    //.section-features > *
+    &>* {
+        transform: skewY(7deg);
+    }
+}

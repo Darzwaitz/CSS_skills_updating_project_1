@@ -5,7 +5,7 @@
             //max-width means if enough available space - use this - if not
             //use 100% of viewport
             max-width: $grid-width;
-            background-color: #eee;
+            //background-color: #eee;
             margin: 0 auto;
             //everything except the last row
             &:not(:last-child) {
