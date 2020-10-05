@@ -3,6 +3,9 @@
     background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.794), rgba(40, 180, 133, 0.774)), url(../img/hero.jpg);
     background-size: cover;
     background-position: top;
+    //prefix
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+    //coords from top left, 100% in X direction 0 in the Y - clockwize kornerz
     clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
     position: relative;
     &__logo-box {
