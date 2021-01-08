@@ -21,14 +21,48 @@
         -webkit-clip-path:circle(50% at 50% 50%);
         clip-path:circle(50% at 50% 50%);
         transform: translateX(-3rem) skewX(12deg);
+        position: relative;
     }
 
     &__img{
         height:100%;
+        transform: translateX(-4rem) scale(1.4);
+        // the backface-visibility property may be needed to solve
+        // glitchy movements of text etc. 
+        backface-visibility: hidden;
+        transition: .5s;
 
     }
 
     &__text{
     transform: skewX(12deg);
+    }
+
+    &__caption{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        // chaining transforms
+        transform: translate(-70%, 40%) rotate(360deg);
+        color: $color-white;
+        
+        text-transform: uppercase;
+        font-size: 1.7rem;
+        text-align: center;
+        opacity: 0;
+        transition: all .5s;
+        // the backface-visibility property may be needed to solve
+        // glitchy movements of text etc. 
+        backface-visibility: hidden;
+    }
+    &:hover &__caption{
+        opacity: 1;
+        transform: translate(-50%, -50%);
+        font-weight: 600;
+    }
+    &:hover &__img{
+        transform: translateX(-4rem) scale(1);
+        // brightness value lower than 100% makes darker - value above is brighter 
+        filter: blur(1.5px) brightness(80%);
     }
 }
