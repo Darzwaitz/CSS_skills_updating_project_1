@@ -1,0 +1,51 @@
+.form{
+    //style all except last child
+    &__group:not(:last-child){
+        margin-bottom: 2rem;
+    }
+    &__input{
+        //input elements need to be set to inherit styles for font
+        font-family: inherit;
+        color: inherit;
+        font-size: 1.5rem;
+        padding: 1.5rem 2rem;
+        border-radius: 2px;
+        background-color: rgba($color-white, .5);
+        border: none;
+        width: 90%;
+        display: block;
+
+        &:focus{
+            outline: none;
+            // box-shadow: 0 1rem 2rem rgba($color-black, .1);
+            border-bottom: 3px solid $color-primary;
+            
+        }
+        //when the user input is invalid
+        &:focus:invalid{
+            border-bottom: 3px solid $color-secondary-dark;
+
+        }
+
+        &::-webkit-input-placeholder{
+            color: $color-grey-dark-2;
+        }
+    }
+
+    
+    &__label{
+        font-size: 1.2rem;
+        font-weight: 700;
+        margin-left: 2rem;
+        margin-top: .7rem;
+        display: block;
+        transition: all .3s;
+    }
+    // + for next sibling Use ~ for general sibling
+    &__input:placeholder-shown + &__label {
+        //opacity used as well as vis:hidden for animation
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(-4rem);
+    }
+}
