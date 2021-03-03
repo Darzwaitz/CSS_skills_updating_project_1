@@ -109,7 +109,7 @@ html {
   }
 }
 
-@media (max-width: 52.25em) {
+@media (max-width: 56.25em) {
   html {
     font-size: 50%;
   }
@@ -133,6 +133,20 @@ html {
 body {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  padding: 1.4rem;
+}
+
+@media (max-width: 56.25em) {
+  body {
+    padding: 0;
+  }
+}
+
+body {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  line-height: 1.7;
+  color: #777;
 }
 
 .heading-primary {
@@ -157,6 +171,13 @@ body {
   color: rgba(255, 0, 0, 0.678);
 }
 
+@media (max-width: 37.5em) {
+  .heading-primary--main {
+    letter-spacing: 1rem;
+    font-family: 5rem;
+  }
+}
+
 .heading-primary--sub {
   display: block;
   font-size: 2rem;
@@ -168,12 +189,10 @@ body {
   margin-bottom: 2rem;
 }
 
-body {
-  font-family: "Lato", sans-serif;
-  font-weight: 400;
-  line-height: 1.7;
-  color: #777;
-  padding: 1.4rem;
+@media (max-width: 37.5em) {
+  .heading-primary--sub {
+    letter-spacing: .5rem;
+  }
 }
 
 .heading-secondary {
@@ -188,6 +207,18 @@ body {
   letter-spacing: .2rem;
   -webkit-transition: all .2s;
   transition: all .2s;
+}
+
+@media (max-width: 56.25em) {
+  .heading-secondary {
+    font-size: 3rem;
+  }
+}
+
+@media (max-width: 37.5em) {
+  .heading-secondary {
+    font-size: 2.5rem;
+  }
 }
 
 .heading-secondary:hover {
@@ -865,6 +896,13 @@ body {
   position: relative;
 }
 
+@media (max-width: 37.5em) {
+  .header {
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);
+  }
+}
+
 .header__logo-box {
   position: absolute;
   top: 4rem;
@@ -894,6 +932,19 @@ body {
   margin-bottom: 8rem;
 }
 
+@media (max-width: 56.25em) {
+  .row:not(:last-child) {
+    margin-bottom: 6rem;
+  }
+}
+
+@media (max-width: 56.25em) {
+  .row {
+    max-width: 50rem;
+    padding: 0rem 3rem;
+  }
+}
+
 .row::after {
   content: "";
   display: table;
@@ -906,6 +957,19 @@ body {
 
 .row [class^="col-"]:not(:last-child) {
   margin-right: 6rem;
+}
+
+@media (max-width: 56.25em) {
+  .row [class^="col-"]:not(:last-child) {
+    margin-right: 0;
+    margin-bottom: 6rem;
+  }
+}
+
+@media (max-width: 56.25em) {
+  .row [class^="col-"] {
+    width: 100% !important;
+  }
 }
 
 .row .col-1-of-2 {
@@ -939,6 +1003,12 @@ body {
   color: #f7f7f7;
 }
 
+@media (max-width: 56.25em) {
+  .footer {
+    padding: 8rem;
+  }
+}
+
 .footer__logo-box {
   text-align: center;
   margin-bottom: 8rem;
@@ -954,6 +1024,14 @@ body {
   padding-top: 2rem;
   display: inline-block;
   margin-left: 8%;
+}
+
+@media (max-width: 56.25em) {
+  .footer__navigation {
+    width: 100%;
+    text-align: center;
+    margin: 0;
+  }
 }
 
 .footer__list {
@@ -994,6 +1072,15 @@ body {
   margin-right: 10%;
 }
 
+@media (max-width: 56.25em) {
+  .footer__copyright {
+    width: 100%;
+    float: none;
+    margin: 0;
+    text-align: center;
+  }
+}
+
 .navigation__checkbox {
   display: none;
 }
@@ -1013,6 +1100,20 @@ body {
   cursor: pointer;
 }
 
+@media (max-width: 56.25em) {
+  .navigation__button {
+    top: 4rem;
+    right: 4rem;
+  }
+}
+
+@media (max-width: 37.5em) {
+  .navigation__button {
+    top: 3rem;
+    right: 3rem;
+  }
+}
+
 .navigation__background {
   height: 6rem;
   width: 6rem;
@@ -1026,6 +1127,20 @@ body {
   transition: -webkit-transform 0.8s cubic-bezier(0.86, 0, 0.07, 1);
   transition: transform 0.8s cubic-bezier(0.86, 0, 0.07, 1);
   transition: transform 0.8s cubic-bezier(0.86, 0, 0.07, 1), -webkit-transform 0.8s cubic-bezier(0.86, 0, 0.07, 1);
+}
+
+@media (max-width: 56.25em) {
+  .navigation__background {
+    top: 4.5rem;
+    right: 4.5rem;
+  }
+}
+
+@media (max-width: 37.5em) {
+  .navigation__background {
+    top: 3.5rem;
+    right: 3.5rem;
+  }
 }
 
 .navigation__nav {

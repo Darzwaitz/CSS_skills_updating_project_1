@@ -10,7 +10,17 @@
             //everything except the last row
             &:not(:last-child) {
                 margin-bottom: $gutter-vertical;
+
+                @include respond(tab-port){
+                    margin-bottom: $gutter-vertical-small;
+                }
             }
+
+            @include respond(tab-port){
+                max-width: 50rem;
+                padding: 0rem 3rem;
+            }
+
             //mixin
             @include clearfix;
             //attribute selector - select all classes that start with "col.."
@@ -19,12 +29,22 @@
                 float: left;
                 &:not(:last-child) {
                     margin-right: $gutter-horizontal;
+
+                    @include respond(tab-port){
+                        margin-right: 0;
+                        margin-bottom: $gutter-vertical-small;
+                    }
                 }
                 ////
                 //attribute selector - any class that starts with "col.."
                 //this can be used on other attributes like [src] etc.
                 //[class$="col-"]{
                 ////
+
+                @include respond(tab-port){
+                    width: 100% !important;
+                }
+                
             }
             // #{$this-syntax-to-use-a-css-variable-in-sass}
             .col-1-of-2 {

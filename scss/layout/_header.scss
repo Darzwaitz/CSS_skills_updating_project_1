@@ -8,6 +8,14 @@
     //coords from top left, 100% in X direction 0 in the Y - clockwize kornerz
     clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
     position: relative;
+
+    @include respond(phone){
+        //prefix
+        -webkit-clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);
+        //coords from top left, 100% in X direction 0 in the Y - clockwize kornerz
+        clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);
+    }
+
     &__logo-box {
         position: absolute;
         top: 4rem;
