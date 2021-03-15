@@ -82,20 +82,20 @@
                         <!-- inform browzer of natural img width(300px),(1000w) so it doesn't need to check or download first -->
                         <!-- inform browzer about aprox width of img at viewport width, with 'sizes'/breakpointz -->
                         <img srcset="img/nat-1.jpg 300w, img/nat-1-large.jpg 1000w"
-                            sizes="(max-width: 900px) 20vw, (max-width: 600px) 30vw, 300px"
+                            sizes="(max-width: 56.25em) 20vw, (max-width: 37.5em) 30vw, 300px"
                             alt="Photo 1"                        
                             class="composition__photo composition__photo--p1"
                             src="img/nat-1-large.jpg"> <!-- for sizes, img size in browzer at 900px (171px / 900) about 20%/20vw 
                             with default/fallback size on the end of 300px - and also src kept for browzer incompatible fallback -->
                         
                         <img srcset="img/nat-2.jpg 300w, img/nat-2-large.jpg 1000w"
-                            sizes="(max-width: 900px) 20vw, (max-width: 600px) 30vw, 300px"
+                            sizes="(max-width: 56.25em) 20vw, (max-width: 37.5em) 30vw, 300px"
                             alt="Photo 2"                        
                             class="composition__photo composition__photo--p2"
                             src="img/nat-2-large.jpg">
 
                         <img srcset="img/nat-3.jpg 300w, img/nat-3-large.jpg 1000w"
-                            sizes="(max-width: 900px) 20vw, (max-width: 600px) 30vw, 300px"
+                            sizes="(max-width: 56.25em) 20vw, (max-width: 37.5em) 30vw, 300px"
                             alt="Photo 3"                        
                             class="composition__photo composition__photo--p3"
                             src="img/nat-3-large.jpg">
@@ -214,7 +214,7 @@
 
                             </h4>
                             <div class="card__details">
-                                <!-- ul>li*5 -->
+                                <!-- emmet ul>li*5 -->
                                 <ul>
                                     <li>7 day tourz</li>
                                     <li>Up to 40 people</li>
@@ -249,7 +249,7 @@
 
                             </h4>
                             <div class="card__details">
-                                <!-- ul>li*5 -->
+                                <!-- emmet ul>li*5 -->
                                 <ul>
                                     <li>5 day tourz</li>
                                     <li>Up to 15 people</li>
@@ -379,19 +379,21 @@
     </main>
 
     <!-- footer -->
-    <!-- footer.footer>.footer__logo-box>img.footer__logo -->
+    <!-- emmett footer.footer>.footer__logo-box>img.footer__logo -->
     <footer class="footer">
         <div class="footer__logo-box">
             <picture  class="footer__logo">
-                <!-- css media query added 'phone' breakpoint -->
+                <!-- ART DIRECTION IN IMGS -->
+                <!-- css media query added 'phone' breakpoint - USED IN SOURCE
+                multiple source can be added for more media queries -->
                 <source srcset="img/logo-green-small-1x.png 1x, img/logo-green-small-2x.png 2x" 
                 media="(max-width: 37.5em)">
-                <!-- set imagez for high & low res -->
+                <!-- density switching - set imagez for high & low res -->
                 <img srcset="img/logo-green-1x.png 1x, img/logo-green-2x.png 2x" alt="Full logo" src="img/logo-green-2x.png">                
             </picture>
             
         </div>
-        <!-- .row>.col-1-of-2*2 -->
+        <!-- emmet .row>.col-1-of-2*2 -->
         <div class="row">
             <div class="col-1-of-2">
                 <div class="footer__navigation">

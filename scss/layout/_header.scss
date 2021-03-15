@@ -1,6 +1,6 @@
 .header {
     height: 95vh;
-    background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.794), rgba(40, 180, 133, 0.774)), url(../img/hero.jpg);
+    background-image: linear-gradient(to right bottom, rgba($color-primary-light, 0.794), rgba($color-primary-dark, 0.774)), url(../img/hero-small.jpg);
     background-size: cover;
     background-position: top;
     //prefix
@@ -8,6 +8,13 @@
     //coords from top left, 100% in X direction 0 in the Y - clockwize kornerz
     clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
     position: relative;
+
+    // 192dpi standard retina screen - and serve for larger than 600px screen
+    //or also serve large img for screens above 2000px
+    @media (min-resolution: 192dpi) and (min-width: 37.5rem), //600px / 16px(original font size
+           (min-width: 125rem){
+        background-image: linear-gradient(to right bottom, rgba($color-primary-light, 0.794), rgba($color-primary-light, 0.774)), url(../img/hero.jpg);
+    }
 
     @include respond(phone){
         //prefix
