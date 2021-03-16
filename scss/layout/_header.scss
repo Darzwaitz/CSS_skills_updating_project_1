@@ -11,7 +11,9 @@
 
     // 192dpi standard retina screen - and serve for larger than 600px screen
     //or also serve large img for screens above 2000px
+    //added compatibility for safari - device pixel ratio for 2 (2px per standard pixel device)
     @media (min-resolution: 192dpi) and (min-width: 37.5rem), //600px / 16px(original font size
+           (-webkit-min-device-pixel-ratio: 2) and (min-width: 37.5rem),
            (min-width: 125rem){
         background-image: linear-gradient(to right bottom, rgba($color-primary-light, 0.794), rgba($color-primary-light, 0.774)), url(../img/hero.jpg);
     }
