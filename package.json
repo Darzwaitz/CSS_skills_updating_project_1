@@ -4,11 +4,11 @@
     "description": "Landing page for natourz",
     "main": "index.js",
     "scripts": {
-        "concat:css": "concat -o css.style.concat.css assets/iconfont.css css/styles.css"
+        "concat:css": "concat -o css/style.concat.css assets/iconfont.css css/styles.css"
     },
     "author": "Darz",
     "license": "ISC",
     "devDependencies": {
-        "concat": "1.0.3"
+        "concat": "^1.0.3"
     }
 }
